@@ -3,13 +3,20 @@
 
 /////////////////////////////
 
+/* process.stdout.write("Inicio -->\n"); // con \n le agrego un salto de linea, sino me muestra todo seguido.
+
+process.stdin.on("data", (data)=>{               //esto me devuelve lo que escribo en la terminal.
+    process.stdout.write("Respuesta: " + data);
+}); */
+
+////////////////////////////////
+
 const commands = require('./commands/index');
 
 const print = function(output){
     process.stdout.write(output);
     process.stdout.write('\nprompt > ');
 }
-
 
 // Output un prompt     
 process.stdout.write('prompt > ');      
@@ -18,18 +25,22 @@ process.stdin.on('data', function (data) {         // a traves de on (va a tomar
 
     let args = data.toString().trim().split(" ");
     let cmd = args.shift();
+    // process.stdout.write(cmd + "\n");               // nos devuelve el comando + un salto de linea.
+    // process.stdout.write("prompt > ");              // nos devuelve el prompt > para seguir escribiendo.
 
-    if(commands[cmd]){
+    /* if(commands[cmd]){                              // ejemplo de comando: echo (repite lo que le escribamos)
         //hasOwnProperty
         commands[cmd](args, print);
     }else{
         //command not found
         print('cmd not found');
-    }
+    } */
+});
 
-})
+////////////////////////////////
 
-process.stdout.write('Hola probando el print');
+
+//aprocess.stdout.write('Hola probando el print');
 
 // Object.keys(process) 
 
