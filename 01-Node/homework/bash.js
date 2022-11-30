@@ -40,7 +40,7 @@ process.stdin.on('data', function (data) {          // a traves de on (va a toma
 ////////////////////////////////
 
 
-//aprocess.stdout.write('Hola probando el print');
+//process.stdout.write('Hola probando el print');
 
 // Object.keys(process) 
 
