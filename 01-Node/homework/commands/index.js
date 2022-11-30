@@ -1,10 +1,13 @@
 let fs = require('fs');
 let request = require('request');
 
+const echo = (args, print)=>{                          // creamos la funcion  fuera del module.exports (para mayor prolijidad)
+    print(args.join(" "));
+};
+
+
 module.exports = {
-    echo: function(args, print) {
-        print(args.join(" "));
-    },
+    echo,
     date: function(args, print) {
         print(Date());    
     },
