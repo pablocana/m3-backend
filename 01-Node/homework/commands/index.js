@@ -28,7 +28,7 @@ module.exports = {
     pwdB:function(args, print){                         //print working directory => carpeta exacta donde estamos parados.
         print(__dirname.split("\\").at(-1));
     },
-    cat: function(args, print){                         // muestra el contenido de un archivo.
+    cat: function(args, print){                         // muestra el contenido de un archivo. Ejemplo: cat bash.js
         fs.readFile(args[0], 'utf8', function(err, data){
             if(err) throw err;
             print(data);
