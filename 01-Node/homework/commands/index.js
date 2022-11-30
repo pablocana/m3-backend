@@ -28,7 +28,7 @@ module.exports = {
         fs.readFile(args[0], 'utf8', function(err, data){
             if(err) throw err;
             data.split('\n').splice(0, 10).join('\n');   // empeza en 0 y elimina 10 elementos. (slice accede a una parte de un arreglo sin modificarlo).
-         });  
+        });  
     },
     tail: function(args, print){                            // lee las ultimas lineas que le indique.
         fs.readFile(args[0], 'utf8', function(err, data){

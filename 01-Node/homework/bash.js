@@ -28,13 +28,13 @@ process.stdin.on('data', function (data) {         // a traves de on (va a tomar
     // process.stdout.write(cmd + "\n");               // nos devuelve el comando + un salto de linea.
     // process.stdout.write("prompt > ");              // nos devuelve el prompt > para seguir escribiendo.
 
-    /* if(commands[cmd]){                              // ejemplo de comando: echo (repite lo que le escribamos)
-        //hasOwnProperty
+    if(commands[cmd]){                              // ejemplo de comando: echo (repite lo que le escribamos) (ver lista de comandos en ./commands/index.js)
+        //otra opción es: hasOwnProperty
         commands[cmd](args, print);
     }else{
         //command not found
         print('cmd not found');
-    } */
+    }
 });
 
 ////////////////////////////////
