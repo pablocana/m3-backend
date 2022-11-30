@@ -48,7 +48,7 @@ module.exports = {
         });
     },
     curl: function(args, print){
-        request(args[0], function(err, data){                   // nos trae el HTML de la url que le pasemos.
+        request(args[0], function(err, data){                   // nos trae el HTML de la url que le pasemos. Ejemplo: http://www.google.com
             if(err) throw err;
             print(data.body);     
         });    
