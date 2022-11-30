@@ -21,6 +21,8 @@ module.exports = {
     },
     pwd: function(args, print){                         //print working directory => donde estamos parados.
         print(process.cwd());
+        //otra opcion:
+        //print(__dirname.split("\\").at(-1));          //para obtener la ultima carpeta del path spliteamos la URL por las "\\" y con el metodo at obtenemos el ultimo elemento del array.
     },
     cat: function(args, print){                         // muestra el contenido de un archivo.
         fs.readFile(args[0], 'utf8', function(err, data){
