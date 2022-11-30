@@ -43,11 +43,12 @@ module.exports = {
     tail: function(args, print){                            // lee las ultimas lineas que le indique.
         fs.readFile(args[0], 'utf8', function(err, data){
             if(err) throw err;
-           print(data.split('\n').splice(-args[1]).join('\n'));        // cuando le pongo negativo como => -args(1) => va de atras para adelante.
+            print(data.split('\n').splice(-args[1]).join('\n'));        // cuando le pongo negativo como => -args(1) => va de atras para adelante.
+            //print(data.split('\n').splice(-5).join('\n'));            // ptro ejemplo de las ultimas 5 lineas
         });
     },
     curl: function(args, print){
-        request(args[0], function(err, data){
+        request(args[0], function(err, data){                   // nos trae el HTML de la url que le pasemos.
             if(err) throw err;
             print(data.body);     
         });    
