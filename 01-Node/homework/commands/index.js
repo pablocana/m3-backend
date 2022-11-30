@@ -37,13 +37,13 @@ module.exports = {
     head: function(args, print){
         fs.readFile(args[0], 'utf8', function(err, data){
             if(err) throw err;
-            data.split('\n').splice(0, 10).join('\n');   // empeza en 0 y elimina 10 elementos. (slice accede a una parte de un arreglo sin modificarlo).
+            data.split('\n').splice(0, 5).join('\n');   // empeza en 0 y elimina 5 elementos. (slice accede a una parte de un arreglo sin modificarlo).
         });  
     },
     tail: function(args, print){                            // lee las ultimas lineas que le indique.
         fs.readFile(args[0], 'utf8', function(err, data){
             if(err) throw err;
-           print(data.split('\n').splice(-args[1]).join('\n'));                 // cuando le pongo negativo como => -args(1) => va de atras para adelante.
+           print(data.split('\n').splice(-args[1]).join('\n'));        // cuando le pongo negativo como => -args(1) => va de atras para adelante.
         });
     },
     curl: function(args, print){
