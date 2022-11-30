@@ -22,7 +22,8 @@ module.exports = {
     pwd: function(args, print){                         //print working directory => donde estamos parados.
         print(process.cwd());
         //otra opcion:
-        //print(__dirname.split("\\").at(-1));          //para obtener la ultima carpeta del path spliteamos la URL por las "\\" y con el metodo at obtenemos el ultimo elemento del array.
+        //print(__dirname.split("\\").at(-1));          //para obtener la ultima carpeta del path spliteamos la URL por las "\\" (usamos doble barra xq usar una \ es para escapar del caracter y no me lo toma)...
+                                                        //...y con el metodo at obtenemos el ultimo elemento del array.
     },                                                  //lo probamos en pwdB.
     pwdB:function(args, print){                         //print working directory => carpeta exacta donde estamos parados.
         print(__dirname.split("\\").at(-1));
