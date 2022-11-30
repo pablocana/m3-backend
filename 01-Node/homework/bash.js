@@ -14,7 +14,7 @@ process.stdin.on("data", (data)=>{               //esto me devuelve lo que escri
 const commands = require('./commands/index');
 
 const print = function(output){
-    process.stdout.write(output);
+    process.stdout.write(output /* + "\n" */);      // puedo agregar el salto de linea aca tmbien.
     process.stdout.write('\nprompt > ');
 }
 
