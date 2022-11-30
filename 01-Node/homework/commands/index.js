@@ -1,13 +1,14 @@
 let fs = require('fs');
 let request = require('request');
 
+
 const echo = (args, print)=>{                          // creamos la funcion  fuera del module.exports (para mayor prolijidad)
     print(args.join(" "));
 };
 
 
 module.exports = {
-    echo,
+    echo,                                              // no necesitamos poner echo:echo xq es una export literal (se llama igual). 
     date: function(args, print) {
         print(Date());    
     },
